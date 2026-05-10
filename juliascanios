@@ -1,16 +1,24 @@
+const DEVICE_LANG = (Device.language() || "pt").toLowerCase().substring(0, 2)
 const SPEECH = {
   pt: {
     start:    "Analisando, aguarde a juju terminar",
     half:     "Scanner em cinquenta por cento. Aguarde mais um pouco.",
     probe:    "Scanner em noventa por cento. Aguarde mais um pouco.",
-    done:     "juju finalizado. Analise os resultados com cuidado.",
+    done:     "Juju finalizado. Analise os resultados com cuidado.",
   },
   en: {
     start:    "Analyzing, please wait for juju to finish.",
     half:     "Scanner at fifty percent. Please wait a little longer.",
     probe:    "Scanner at ninety percent. Almost done.",
-    done:     "juju finished. Analyze the results carefully.",
+    done:     "Juju SS finished. Analyze the results carefully.",
   },
+  es: {
+    start:    "Analizando, espera que juju termine.",
+    half:     "Escáner al cincuenta por ciento. Espera un poco más.",
+    probe:    "Escáner al noventa por ciento. Ya casi termina.",
+    done:     "Juju finalizado. Analiza los resultados con cuidado.",
+  },
+}
   es: {
     start:    "Analizando, espera que juju termine.",
     half:     "Escáner al cincuenta por ciento. Espera un poco más.",
