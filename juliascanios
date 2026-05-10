@@ -1,4 +1,4 @@
-const DEVICE_LANG = (Device.language() || "pt").toLowerCase().substring(0, 2)
+  const DEVICE_LANG = (Device.language() || "pt").toLowerCase().substring(0, 2)
 const SPEECH = {
   pt: {
     start:    "Analisando, aguarde a juju terminar",
@@ -1301,9 +1301,57 @@ function buildHTML(findings, netEntries, cheatAppFindings, knownCheatFindings, i
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="utf-8">
 <style>
-  * { box-sizing:border-box; margin:0; padding:0; }
-  body { background:#000000; color:#ffffff;  font-family:-apple-system,ui-monospace,monospace; font-size:13px; }
-
+  /* HERO ROSA LINDO */
+  .hero { 
+    background: linear-gradient(135deg, #2a001f 0%, #11000f 60%, #000000 100%);
+    border-bottom: 3px solid #ff1493;
+    padding: 35px 16px 28px;
+    position: relative; 
+    overflow: hidden;
+    text-align: center;
+  }
+  .hero::after {
+    content: "";
+    position: absolute;
+    top: -40%;
+    left: -40%;
+    width: 180%;
+    height: 180%;
+    background: radial-gradient(circle, rgba(255,20,147,0.18) 0%, transparent 65%);
+  }
+  .hero-eyebrow {
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: #ff69b4;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  .hero-name {
+    font-size: 38px;
+    font-weight: 800;
+    background: linear-gradient(90deg, #ff1493, #ff69b4, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -1.8px;
+    margin: 6px 0 8px 0;
+  }
+  .hero-credits {
+    font-size: 13px;
+    color: #ff8ec1;
+    letter-spacing: 1px;
+    margin-top: 10px;
+  }
+  /* Cores Rosa no resto do app */
+  .card.high { border-left-color:#ff1493; }
+  .card.critical { border-left-color:#ff1493; }
+  .badge.high { background:#3a0028; color:#ff69b4; }
+  .badge.critical { background:#2a001f; color:#ff1493; }
+  .stat .num { color:#ff1493; }
+  .sh-high .sh-title { color:#ff69b4; }
+  .reason { color:#ff8ec1; }
+  .uptime-dot { background:#ff1493; box-shadow:0 0 10px #ff1493; }
+</style>
   /* HERO FILE + GRID - ROSA + PRETO */
 .hero-file {
   font-size:10px; color:#aaa; word-break:break-all;
@@ -2516,8 +2564,11 @@ function setLang(lang) {
 
   function q(sel) { return Array.from(document.querySelectorAll(sel)); }
 
-  q('.hero-eyebrow').forEach(function(el){ el.textContent = t.eyebrow; });
-  q('.hero-credits').forEach(function(el){ el.textContent = t.credits; });
+ '. hero-eyebrow').forEach(function(el){ el.textContent = t.eyebrow; });
+  // Créditos personalizados (não traduzir)
+q('.hero-credits').forEach(function(el){ 
+  el.innerHTML = `<span class="credit-name">JÚLIAZZXY</span> &middot; by Júlia`; 
+});
   q('.hero-file strong').forEach(function(el){ el.textContent = t.fileLabel; });
 
   var hgLabels = q('.hg-label');
