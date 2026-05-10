@@ -1302,29 +1302,54 @@ function buildHTML(findings, netEntries, cheatAppFindings, knownCheatFindings, i
 <meta charset="utf-8">
 <style>
   * { box-sizing:border-box; margin:0; padding:0; }
-  body { background:#000000; color:#ffffff;  font-family:-apple-system,ui-monospace,monospace; font-size:13px; }
-
-  /* HERO FILE + GRID - ROSA + PRETO */
-.hero-file {
-  font-size:10px; color:#aaa; word-break:break-all;
-  padding:7px 10px; background:#121212;
-  border-radius:7px; border-left:3px solid #ff1493;
-  margin-bottom:14px; line-height:1.5;
-  text-align:left;
-}
-.hero-file strong { color:#ff69b4; }
-
-.hero-grid { 
-  display:grid; grid-template-columns:1fr 1fr; gap:8px; 
-}
-.hg-card { 
-  background:#1a1a1a; 
-  border:1px solid #330033;
-  background:#121212; 
-  border-radius:8px;
-  padding:9px 12px; 
-  border:1px solid #333333;
-}
+  body { 
+    background:#000000; 
+    color:#ffffff; 
+    font-family:-apple-system,ui-monospace,monospace; 
+    font-size:13px; 
+  }
+  /* HERO ROSA LINDO */
+  .hero { 
+    background: linear-gradient(135deg, #2a001f 0%, #11000f 60%, #000000 100%);
+    border-bottom: 3px solid #ff1493;
+    padding: 35px 16px 28px;
+    position: relative; 
+    overflow: hidden;
+    text-align: center;
+  }
+  .hero::after {
+    content: "";
+    position: absolute;
+    top: -40%;
+    left: -40%;
+    width: 180%;
+    height: 180%;
+    background: radial-gradient(circle, rgba(255,20,147,0.18) 0%, transparent 65%);
+  }
+  .hero-eyebrow {
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: #ff69b4;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  .hero-name {
+    font-size: 38px;
+    font-weight: 800;
+    background: linear-gradient(90deg, #ff1493, #ff69b4, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -1.8px;
+    margin: 6px 0 8px 0;
+  }
+  .hero-credits {
+    font-size: 13px;
+    color: #ff8ec1;
+    letter-spacing: 1px;
+    margin-top: 10px;
+  }
+</style>
 .hg-label { 
   font-size:9px; 
   color:#ff69b4; 
@@ -2462,7 +2487,7 @@ async function showResult(html) {
     ffLastOpen: "Última apertura",
     ffFirstOpen: "Primera apertura",
     ffSessions: "inicializaciones registradas en el período",
-    ffHint: "Si la última apertura fue después del partido → ¡aplica el W.O!",
+    ffHint: "Si la última apertura fue despustylés del partido → ¡aplica el W.O!",
     appStoreLabel: "App Store abierta",
     appStoreHint: "Si fue después del partido → ¡aplica el W.O!",
     uptimeLess20: "MENOS DE 20MIN — ¡El informe puede no cubrir toda la partida!",
