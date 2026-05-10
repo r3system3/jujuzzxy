@@ -1677,9 +1677,18 @@ function buildHTML(findings, netEntries, cheatAppFindings, knownCheatFindings, i
 <body>
 
 <div class="hero">
+  <!-- === júliazzyz === -->
+  <div style="text-align:center; padding:25px 0 15px 0;">
+    <div style="color:#ff69b4; font-size:23px; font-weight:700; letter-spacing:3px;">SCANNER IOS</div>
+    <div style="color:#ff1493; font-size:56px; font-weight:900; line-height:1; margin:10px 0; text-shadow:0 0 20px #ff1493;">júliazzyx<span style="color:#ff69b4;">SS</span></div>
+    <div style="color:#db2777; font-size:17px;">júliazzyx • r3 • azorie</div>
+  </div>
+
+  <!-- === Parte original mantida === -->
   <div class="hero-eyebrow">Scanner iOS</div>
   <div class="hero-name">júliazzxy<span>SS</span></div>
   <div class="hero-credits"><span class="credit-name">júliazzxy</span> &middot; <span class="credit-name">r3</span> &middot; <span class="credit-name">azorie</span></div>
+</div>
   <div class="lang-bar">
     <button class="lang-btn active" id="btn-pt">PT-BR</button>
     <button class="lang-btn" id="btn-en">EN</button>
