@@ -1,4 +1,4 @@
-  const DEVICE_LANG = (Device.language() || "pt").toLowerCase().substring(0, 2)
+const DEVICE_LANG = (Device.language() || "pt").toLowerCase().substring(0, 2)
 const SPEECH = {
   pt: {
     start:    "Analisando, aguarde a juju terminar",
